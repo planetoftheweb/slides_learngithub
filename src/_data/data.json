@@ -1,0 +1,7 @@
+{
+  "layout": "base.njk",
+  "eleventyNavigation": {
+    "key": "slides",
+    "parent": "projects"
+  }
+}

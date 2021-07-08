@@ -1,0 +1,9 @@
+{
+  "eslint.validate": ["vue", "react", "html", "json", "javascript"],
+  "editor.formatOnSave": true,
+  "vetur.validation.template": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "emmet.showExpandedAbbreviation": "never"
+}

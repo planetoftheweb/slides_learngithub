@@ -1,0 +1,1251 @@
+@import './boostrap-rayveal.scss';
+@import '../../node_modules/reveal.js/css/reveal.scss';
+@import '../../node_modules/reveal.js/css/theme/template/mixins.scss';
+@import '../../node_modules/reveal.js/css/theme/template/settings.scss';
+
+// ---------------------------------------------
+
+// Background of the presentation
+$backgroundColor: transparent;
+
+// Primary/body text
+$mainFontSize: 1em;
+$mainFont: 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$mainColor: #000;
+
+// Vertical spacing between blocks of text
+$blockMargin: 0;
+
+// Headings
+$headingFont: $mainFont;
+$headingMargin: 0 0 $blockMargin 0;
+$headingColor: #000;
+$headingLineHeight: 1;
+$headingLetterSpacing: tight;
+$headingTextTransform: inherit;
+$headingTextShadow: none;
+$headingFontWeight: 900;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1em;
+
+$codeFont: 'Source Code Pro', 'Courier New', Courier, monospace;
+
+// Links and actions
+$linkColor: $cyan;
+$linkColorHover: $cyan-400;
+
+// Text selection
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+// @import '../../node_modules/reveal.js/css/reveal.scss';
+
+@import '../../node_modules/reveal.js/css/theme/template/theme.scss';
+
+// Theme template ------------------------------
+
+:root {
+  --minimum-size: 200;
+  --maximum-size: 200;
+  --minimum-viewport-width: 300;
+  --maximum-viewport-width: 3000;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+.reveal-viewport .slides {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal-viewport .slides > section,
+.reveal-viewport .slides > section > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: inherit;
+}
+
+.reveal-viewport .slides [contenteditable]:focus {
+  outline: none;
+}
+
+/*********************************************
+ * Paragraphs
+ *********************************************/
+
+.reveal-viewport p {
+  font-size: clamp(0.8em, 4vw, 1.2em);
+  line-height: 120%;
+  margin-bottom: 0;
+  margin: auto 3em;
+  margin-top: 1em;
+}
+
+.reveal-viewport h1 + p,
+.reveal-viewport h2 + p {
+  margin-top: 0.5em;
+}
+
+.reveal-viewport p > em {
+  font-size: 0.7em;
+  padding: 0 !important;
+}
+
+.reveal-viewport p small {
+  line-height: 120%;
+  color: $gray-600;
+}
+/*********************************************
+ * Headlines
+ *********************************************/
+.reveal-viewport h1,
+.reveal-viewport h1 + h2,
+.reveal-viewport h1 + h3 {
+  margin-top: 0.2em;
+  line-height: 120%;
+}
+
+.reveal-viewport section > h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: clamp(2.3em, 4vw, 4em);
+  animation: typing 1.5s steps(40, end) forwards !important;
+}
+
+/*********************************************
+ * Lists
+ *********************************************/
+
+.reveal-viewport ol,
+.reveal-viewport dl,
+.reveal-viewport ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.reveal-viewport ul {
+  margin: 0;
+  list-style-type: disc;
+  font-size: clamp(0.8em, 4vw, 1.5em);
+}
+
+.reveal-viewport ul + p,
+.reveal-viewport ol + p {
+  margin-top: 0 !important;
+}
+
+.reveal-viewport ul li,
+.reveal-viewport ol li {
+  line-height: 120%;
+  margin: 0.5em 3em;
+}
+
+.reveal-viewport ul li ul li,
+.reveal-viewport ol li ul li {
+  margin-bottom: 20px !important;
+  margin-left: -30px !important;
+  list-style-type: none;
+}
+
+.reveal-viewport ul li:first-child,
+.reveal-viewport ol li:first-child {
+  margin-top: 1.25em;
+}
+
+/*********************************************
+ * Tables
+ *********************************************/
+.reveal-viewport table {
+  border-collapse: collapse;
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.reveal-viewport table th {
+  vertical-align: middle;
+  font-weight: 700;
+  color: $gray-200;
+  background: $blue;
+  line-height: 90%;
+}
+
+.reveal-viewport table thead tr th {
+  border: none;
+}
+
+.reveal-viewport table th,
+.reveal-viewport table td {
+  padding: 0.4em;
+  border-bottom: 1px solid $gray-300;
+  text-align: center;
+}
+
+/* background-color: $gray-200; */
+
+.reveal-viewport table th {
+  border: 1px solid $gray-200;
+}
+
+.reveal-viewport table th:first-child {
+  border-left: 1px solid $gray-300;
+  border-top: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300;
+}
+
+.reveal-viewport table th:last-child {
+  border-right: 1px solid $gray-300;
+  border-top: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300;
+}
+
+.reveal-viewport table th[align='center'],
+.reveal-viewport table td[align='center'] {
+  text-align: center;
+}
+
+.reveal-viewport table th[align='right'],
+.reveal-viewport table td[align='right'] {
+  text-align: right;
+}
+
+.reveal-viewport table td:first-child {
+  text-align: left;
+  padding-left: 0.8em;
+}
+
+.reveal-viewport table td {
+  font-size: 0.8em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*********************************************
+ * Other Elements
+ *********************************************/
+
+.reveal-viewport img,
+.reveal-viewport video {
+  max-width: 100%;
+}
+
+.reveal-viewport iframe {
+  margin-top: 0.5em;
+}
+
+/*********************************************
+ * Code
+ *********************************************/
+
+.reveal-viewport pre {
+  position: relative;
+  font-weight: 400;
+  margin-top: 1em;
+  overflow: hidden;
+  box-shadow: none;
+  width: auto;
+  max-width: 90%;
+}
+
+.reveal-viewport pre code {
+  padding: 8px 10px !important;
+  line-height: 120% !important;
+}
+
+.reveal-viewport code {
+  background-color: $gray-400;
+}
+
+.reveal-viewport pre + pre,
+.reveal-viewport pre + pre + pre {
+  margin-top: 0.25em;
+}
+
+.reveal-viewport li li code {
+  background: $gray-600;
+  color: $gray-200;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 0.3em;
+}
+.reveal-viewport p code,
+.reveal-viewport li code {
+  background-color: $gray-200;
+  color: $gray-800;
+  font-weight: 400;
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  margin: 0.2em 0.2em;
+}
+
+.reveal-viewport pre > code {
+  background: var(--bs-beige);
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  font-size: clamp(1em, 4vw, 1.8em);
+  font-weight: 400;
+  text-align: left;
+  white-space: pre;
+  padding: 1em;
+  color: inherit;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.reveal-viewport table td {
+  font-size: clamp(0.5em, 3vw, 1.4em);
+  text-align: left;
+  padding-left: 0 !important;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal-viewport a {
+  color: $blue-500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.reveal-viewport a:hover {
+  text-decoration: none;
+  color: $purple-500;
+  text-shadow: none;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal-viewport section > img {
+  margin: 15px 0px;
+}
+
+.reveal-viewport section img.plain {
+  border: 0;
+  box-shadow: none;
+}
+
+/*********************************************
+* Code Colors
+*********************************************/
+
+.reveal-viewport code {
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  margin: 1px;
+  padding: 0 0.5em;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: text;
+  border-radius: 8px;
+  background: $gray-600;
+  color: $white;
+}
+
+.reveal-viewport .code-primary {
+  background: $blue !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-success {
+  background-color: $green !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-info {
+  background-color: $cyan !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-warning {
+  background-color: $yellow !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-danger {
+  background-color: $red !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-royal {
+  background-color: $purple !important;
+  color: $white !important;
+}
+
+.reveal-viewport .code-exciting {
+  background-color: $pink !important;
+  color: $white !important;
+}
+
+/*********************************************
+ * Title Slide
+ *********************************************/
+.reveal-viewport.layout-title {
+  background: linear-gradient(to right, $blue, $cyan);
+}
+
+.reveal-viewport.layout-title .slides {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+  color: $gray-200;
+  letter-spacing: 0.03em;
+  text-align: center;
+  font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+}
+
+.reveal-viewport.layout-title section {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.reveal-viewport.layout-title .slides h1,
+.reveal-viewport.layout-title .slides h2,
+.reveal-viewport.layout-title .slides h3,
+.reveal-viewport.layout-title .slides h4,
+.reveal-viewport.layout-title .slides h5,
+.reveal-viewport.layout-title .slides h6 {
+  margin-top: 0;
+}
+
+.reveal-viewport.layout-title .slides h1 {
+  font-size: 2.2em;
+  color: $yellow;
+}
+
+.reveal-viewport.layout-title .slides h2 {
+  font-size: 1.6em;
+  line-height: 100%;
+  color: $gray-800;
+  filter: contrast(0.9);
+}
+
+.reveal-viewport.layout-title p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.reveal-viewport.layout-title ol {
+  margin-top: 1em;
+}
+.reveal-viewport.layout-title ol li {
+  margin: 0;
+}
+
+.reveal-viewport.layout-title .btn {
+  font-size: 1em;
+}
+
+.reveal-viewport.layout-title small {
+  font-weight: 100;
+  font-size: 0.5em;
+  color: $gray-300;
+}
+
+.reveal-viewport.layout-title section {
+  background-color: transparent !important;
+}
+
+.reveal-viewport.layout-title a {
+  color: $yellow;
+}
+
+.reveal-viewport.layout-title li code {
+  background-color: $red !important;
+  color: $gray-800;
+  font-weight: 600;
+}
+
+.reveal-viewport.layout-title .footer {
+  background: #333;
+}
+
+.reveal-viewport.layout-title:nth-of-type(1) section > h1 {
+  animation: typing 1.5s steps(40, end) forwards !important;
+}
+
+/*********************************************
+ * Background Image
+ *********************************************/
+
+.reveal-viewport.layout-background-image .slides {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.reveal-viewport.layout-background-image .slides {
+  letter-spacing: 0.03em;
+  color: $gray-200;
+  text-align: center;
+}
+
+.reveal-viewport.layout-background-image h1,
+.reveal-viewport.layout-background-image h2,
+.reveal-viewport.layout-background-image h3,
+.reveal-viewport.layout-background-image h4,
+.reveal-viewport.layout-background-image h5,
+.reveal-viewport.layout-background-image h6 {
+  color: inherit;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-shadow: 0px 0px 10px black;
+}
+
+.reveal-viewport.layout-background-image p {
+  text-shadow: 0px 0px 5px black;
+}
+
+.reveal-viewport.layout-background-image p small {
+  font-size: 0.7em !important;
+  color: $gray-200;
+}
+
+.reveal-viewport.layout-background-image a {
+  color: $gray-200;
+}
+
+/*********************************************
+ * Mostly Image
+ *********************************************/
+
+.reveal-viewport.layout-mostly-image {
+  background-color: $gray-800;
+}
+
+.reveal-viewport.layout-mostly-image .slides {
+  width: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+}
+
+.reveal-viewport.layout-mostly-image .slide-background-content {
+  width: 60% !important;
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+}
+
+.reveal-viewport.layout-mostly-image section {
+  animation: fadeInRight;
+  animation-duration: 0.5s;
+  align-self: flex-end !important;
+  width: 40% !important;
+  color: $gray-300;
+}
+
+/* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+
+.reveal-viewport.layout-mostly-image h1 {
+  color: $white;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  font-size: calc(30px + (100 - 30) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+}
+
+.reveal-viewport.layout-mostly-image p {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 120%;
+  font-size: calc(15px + (50 - 15) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+}
+
+.reveal-viewport.layout-mostly-image small {
+  font-size: calc(15px + (30 - 15) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+}
+
+.reveal-viewport.layout-mostly-image section li {
+  color: $gray-200;
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 110%;
+  font-size: calc(22px + (50 - 22) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+}
+
+.reveal-viewport.layout-mostly-image ul li:first-child,
+.reveal-viewport.layout-mostly-image ul li:first-child {
+  margin-top: 0.8em;
+}
+
+/*********************************************
+ * Background Video
+ *********************************************/
+
+.reveal-viewport.layout-background-video {
+  color: $gray-200;
+}
+
+.reveal-viewport.layout-background-video p small {
+  font-size: 0.7em !important;
+  color: $gray-200;
+}
+
+/*********************************************
+ * Quotes
+ *********************************************/
+.reveal-viewport.layout-quote {
+  background: transparent;
+}
+
+.reveal-viewport.layout-quote .slides {
+  color: $gray-200;
+}
+
+.reveal-viewport.layout-quote blockquote {
+  color: $gray-200 !important;
+  font-size: 2.5em;
+  line-height: 110%;
+}
+.reveal-viewport.layout-quote blockquote footer {
+  color: $gray-200;
+  font-size: 0.3em;
+}
+
+.reveal-viewport.layout-quote section {
+  background-color: transparent !important;
+}
+
+/*********************************************
+ * Persistent Footer
+ *********************************************/
+
+.footer {
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  background: $gray-800;
+  color: $white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 500;
+  padding: 10px 0 !important;
+  line-height: 100%;
+}
+
+.footer a {
+  color: $gray-200;
+  padding: 0.1em;
+}
+
+.footer a:hover {
+  color: $gray-200 !important;
+  text-decoration: underline;
+}
+
+footer.fadein {
+  opacity: 1;
+  animation-name: fadein;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+}
+
+footer.fadeout {
+  opacity: 0;
+  animation-name: fadeout;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  transform: translate(0, 200px);
+}
+
+/*********************************************
+ * tips
+ *********************************************/
+
+.reveal .tip span {
+  background: $gray-800;
+  bottom: 100%;
+  display: block;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  font-size: 0.7em;
+  left: -20px;
+  opacity: 0;
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  pointer-events: none;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 2px solid $gray-200;
+  transform: translateY(25px);
+  transition: all 0.25s ease-out;
+  white-space: nowrap;
+  transform: translateY(0px);
+}
+
+.reveal-viewport .tip:hover span {
+  display: inline-block;
+  opacity: 1;
+  animation: fadeInDown;
+  animation-duration: 0.5s;
+}
+
+.reveal-viewport a.tip span {
+  font-weight: 600;
+  color: $gray-200 !important;
+}
+
+.reveal-viewport a code,
+.reveal-viewport .tip {
+  cursor: pointer !important;
+}
+
+/*********************************************
+ * Sidebar Menu
+ *********************************************/
+
+.sidebar-menu {
+  background: rgb(240, 192, 81);
+  font-size: 0.6em;
+  height: 100vh;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  opacity: 1;
+  width: auto;
+  z-index: 450;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-menu a {
+  color: rgb(132, 61, 0) !important;
+  text-decoration: none;
+}
+
+.sidebar-menu .menu-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.4em 1.2em;
+  padding-left: 100x;
+  border-bottom: 1px solid rgba(174, 4, 4, 0.2);
+}
+
+.sidebar-menu .menu-container:hover {
+  background-color: rgba(183, 55, 0, 0.2);
+}
+
+.sidebar-menu .menu-headline {
+  background-color: rgb(0, 0, 0);
+  padding: 0.5em 0.5em;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: rgb(201, 168, 36);
+  z-index: 10000;
+}
+
+.sidebar-menu .menu-container.active {
+  background-color: rgb(220, 159, 4);
+  border-top: 8px solid rgba(203, 124, 13);
+  padding-bottom: 1em;
+}
+
+.sidebar-menu .menu-container .menu-link {
+  flex-grow: 4;
+  padding-left: 2.7em;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='RGBA(87, 53, 7, .65)' class='bi bi-collection-play-fill' viewBox='0 0 16 16'><path d='M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 1.15rem 1.15rem;
+  overflow: hidden;
+}
+
+.sidebar-menu .menu-container .menu-notes {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='RGBA(87, 53, 7, .65)' class='bi bi-file-text-fill' viewBox='0 0 16 1'><path d='M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 20px 40px;
+  overflow: hidden;
+}
+
+.sidebar-menu .menu-container .menu-title {
+  font-size: 2em;
+  flex-basis: content;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-menu .menu-container.active a .menu-title {
+  color: rgb(251, 223, 153);
+}
+
+.sidebar-menu .menu-container:hover .menu-title {
+  color: rgb(255, 229, 127);
+  text-decoration: underline;
+}
+
+.sidebar-menu.menuin {
+  opacity: 1;
+  animation-name: menuin;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+}
+
+.sidebar-menu.menuout {
+  opacity: 0;
+  animation-name: menuout;
+  animation-timing-function: ease-out;
+  animation-duration: 0.2s;
+  transform: translate(-100%, 0);
+}
+
+@keyframes menuin {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes menuout {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-100%, 0);
+  }
+}
+
+/*********************************************
+ * LAYOUTS
+ *********************************************/
+
+/*********************************************
+ * Has Icon
+ *********************************************/
+
+.layout-has-icon .slides h1 {
+  position: relative;
+  padding-left: 2em;
+}
+
+.layout-has-icon .slides h1 > i {
+  position: absolute;
+  margin-left: -1em;
+  top: -0.22em;
+  font-size: 1.8em;
+  color: $red;
+  vertical-align: middle;
+}
+
+/*********************************************
+ * Circles
+ *********************************************/
+
+.reveal-viewport.layout-circles ul {
+  margin-left: 2vmin;
+  margin-right: 2vmin;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reveal-viewport.layout-circles li.fragment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 400;
+  background-color: $purple;
+  color: $white;
+  list-style: none;
+  margin: 0.8vmin 1vmin;
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  width: calc(250px + (240 - 250) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  height: calc(250px + (240 - 250) * ((100vw - 300px) / (var(--maximum-viewport-width) - var(--minimum-viewport-width))));
+  text-align: center;
+  line-height: 100%;
+  opacity: 0.5 !important;
+}
+
+.reveal-viewport.layout-circles li.current-fragment {
+  opacity: 1 !important;
+}
+
+/*********************************************
+ * Layout Codelist
+ *********************************************/
+
+.reveal-viewport.layout-code-list section {
+  text-align: center;
+}
+
+.reveal-viewport.layout-code-list strong {
+  color: $orange;
+}
+
+.reveal-viewport.layout-code-list p {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.4em;
+}
+
+.reveal-viewport.layout-code-list p code {
+  background-color: $blue;
+  color: $white;
+  font-size: clamp(1em, 4vw, 1.4em);
+  padding: 0.2em 0.4em;
+  line-height: 120%;
+  margin: 0;
+}
+
+.reveal-viewport.layout-code-list h2 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+  color: $red;
+}
+
+.reveal-viewport.layout-code-list ul ul,
+.reveal-viewport.layout-code-list ul ol,
+.reveal-viewport.layout-code-list ol ol,
+.reveal-viewport.layout-code-list ol ul {
+  margin-left: 0;
+}
+
+.reveal-viewport.layout-code-list ul li ul li,
+.reveal-viewport.layout-code-list ol li ul li {
+  margin: 0 !important;
+}
+
+.reveal-viewport.layout-code-list ol li code,
+.reveal-viewport.layout-code-list ul li code {
+  background-color: $purple;
+  color: $white;
+  font-size: clamp(1em, 4vw, 1.4em);
+  padding: 0.2em 0.4em;
+  line-height: 120%;
+  margin: 0;
+}
+
+.reveal-viewport.layout-code-list ul li,
+.reveal-viewport.layout-code-list ol li {
+  text-align: center;
+  list-style: none;
+  line-height: 120%;
+  font-weight: 800;
+  margin-left: 2em;
+  margin-right: 2em;
+  white-space: wrap;
+  font-size: clamp(0.64em, 5vw, 0.6em);
+}
+
+.reveal-viewport.layout-code-list ul ul,
+.reveal-viewport.layout-code-list ol ol {
+  margin-top: 0;
+}
+
+.reveal-viewport.layout-code-list ul ul code,
+.reveal-viewport.layout-code-list ol ol code,
+.reveal-viewport.layout-code-list ul code,
+.reveal-viewport.layout-code-list ol code {
+  font-weight: 600 !important;
+  margin-top: 0.5em;
+}
+
+.reveal-viewport.layout-code-list p code,
+.reveal-viewport li code {
+  font-size: clamp(1em, 4vw, 1.1em);
+}
+
+.reveal-viewport.layout-code-list ul li ul li:nth-child(1) code {
+  background-color: $yellow-300;
+  color: $black;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: clamp(1em, 4vw, 1.2em);
+}
+
+.reveal-viewport.layout-code-list ul li ul li:nth-child(1) strong code {
+  background-color: $green;
+  color: $white;
+}
+
+.reveal-viewport.layout-code-list ul li ul li:nth-child(2) code {
+  background-color: $blue-200;
+  color: $black;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: clamp(1em, 4vw, 1.2em);
+}
+.reveal-viewport.layout-code-list ul li ul li:nth-child(3) code {
+  background-color: $red-200;
+  color: $black;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: clamp(1em, 4vw, 1.2em);
+}
+.reveal-viewport.layout-code-list ul li ul li:nth-child(4) code {
+  background-color: $pink-200;
+  color: $black;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: clamp(1em, 4vw, 1.2em);
+}
+.reveal-viewport.layout-code-list ul li ul li:nth-child(5) code {
+  background-color: $orange-200;
+  color: $black;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+  font-size: clamp(1em, 4vw, 1.2em);
+}
+
+/*********************************************
+ * Layout Codelist
+ *********************************************/
+.reveal-viewport.layout-scroll-image {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+}
+
+.reveal-viewport.layout-scroll-image section {
+  display: initial !important;
+  width: 120%;
+  height: 120%;
+  overflow: scroll;
+}
+
+.reveal-viewport.layout-scroll-image * {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.reveal-viewport.layout-scroll-image *::-webkit-scrollbar {
+  width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+/*********************************************
+ * Layout Longcode
+ *********************************************/
+.reveal-viewport.layout-longcode pre {
+  max-width: 95%;
+}
+
+.reveal-viewport.layout-longcode pre code {
+  max-height: 450px;
+  overflow: auto;
+}
+
+/*********************************************
+ * Bootstrap Adjustments
+ *********************************************/
+
+/*********************************************
+ * Bootstrap Cards
+ *********************************************/
+
+.reveal-viewport .card {
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
+  margin-top: 1em;
+}
+
+.reveal-viewport .card .card-title {
+  font-weight: 600;
+}
+
+.reveal-viewport .card p {
+  margin: 0;
+  margin-top: 0.1em;
+  line-height: 110%;
+  font-size: 0.6em;
+}
+.reveal-viewport .card .btn {
+  margin-top: 3em;
+}
+
+/*********************************************
+ * Bootstrap List Group
+ *********************************************/
+
+.reveal-viewport .list-group {
+  font-size: 0.7em;
+  letter-spacing: 0.01em;
+}
+
+.reveal-viewport .list-group .list-group-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.reveal-viewport .list-group .list-group-item i {
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5em;
+}
+
+.reveal-viewport .list-group .current-fragment {
+  background-color: $blue;
+  color: $white;
+  font-weight: 600;
+}
+
+/*********************************************
+ * Bootstrap Alerts
+ *********************************************/
+
+.reveal-viewport .alert {
+  width: auto;
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  line-height: 110%;
+}
+
+.reveal-viewport .alert .alert-heading {
+  font-weight: 600;
+}
+
+/*********************************************
+ * Slide-link
+ *********************************************/
+
+.slide-link {
+  position: fixed;
+  left: -70px;
+  bottom: 4em;
+  padding: 10px 20px;
+  padding-left: 100px;
+  border-radius: 10px;
+  z-index: 1000;
+  background: $purple;
+  opacity: 0;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+  animation: slideOutLink 1s 6.5s ease-in-out backwards, slideInLink 0.7s 2s ease-in-out backwards;
+  font-size: 0.5em !important;
+  display: flex !important;
+  align-items: center !important;
+  font-weight: 400;
+  letter-spacing: 0em;
+  border: 1px solid $gray-200;
+}
+
+.slide-link a {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit !important;
+  display: inherit;
+  align-items: inherit;
+}
+
+.slide-link:hover {
+  background-color: $blue !important;
+}
+
+.slide-link a:hover {
+  text-decoration: none;
+}
+
+.slide-link i {
+  font-size: 1.8em;
+  margin-right: 10px;
+}
+
+/*********************************************
+ * Keyframes
+ *********************************************/
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate(0, 200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 200px);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLink {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLink {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}

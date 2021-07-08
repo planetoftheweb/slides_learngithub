@@ -1,0 +1,9 @@
+---
+permalink: /js/slideList.json
+---
+[
+  {%- for item in collections.slides %}{
+    "filename": "{{ item.fileSlug }}",
+    "title": "{{item.data.title}}" }
+{% if not loop.last %},{% endif %}
+{%- endfor %}]
