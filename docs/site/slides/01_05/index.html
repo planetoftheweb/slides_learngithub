@@ -35,11 +35,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_01/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_01/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
                       01_01 What is Git</a>
-                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -71,11 +71,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_05/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_05/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       01_05 Deleting and Renaming Files</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_05&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_05&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -190,49 +190,67 @@
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
-          <h1 id="what-is-git%3F">What is Git? <a class="direct-link" href="#what-is-git%3F"> </a></h1>
-<ul>
-<li>Version Control</li>
-<li>Time Machine</li>
-<li>Check points (commits)</li>
-<li>Multiverse (branches)</li>
-<li>Synchronize (merging)</li>
-</ul>
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="deleting-and-renaming">Deleting and Renaming <a class="direct-link" href="#deleting-and-renaming"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git is what's called a Version or Source Control System. In essence it lets you manage changes you make to files over time.</p>
-<p>With Git, you're basically a historian with a time machine. You're in charge of documenting the history of your project, WITH the added benefit of being able to jump back and forth through time, but unlike normal historians, you have the ability to re-write history.</p>
-<p>You can save checkpoints, which are called commits and leave messages about what happened at each of these checkpoints.</p>
-<p>The best part is another feature called branching that lets you create alternate versions of your code. It's like being able to create alternate realities of your project.</p>
-<p>A branch is a copy of your project that you can work on without changing the original. You can then synchronize branches called merging or go back and forth between them.</p>
+<p>As you're working through your projects, you'll need to rename, move or delete certain files. The way git handles these normal file operations can be a bit confusing, so let's go over those.</p>
 <hr>
-<h1 id="what-do-i-need%3F">What do I need? <a class="direct-link" href="#what-do-i-need%3F"> </a></h1>
-<ul>
-<li><a href="https://git-scm.com">Git Website</a></li>
-<li>Download Installer</li>
-<li>Windows: GitBash</li>
-</ul>
+<h1 id="deleting-files">Deleting Files <a class="direct-link" href="#deleting-files"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git might already be installed on your machine, but to make sure you have the latest version, you can go to the Git website.</p>
-<p>From here, you simply download an installer for your machine type and follow the instructions. The defaults are perfectly fine for most installations.</p>
-<p>However, if you're on windows, one of the options is to install a terminal application called Gitbash, which makes it easier to run linux commands. That's what most people use when working with Git, however the commands on a windows machine are pretty similar.</p>
+<p>Deleting is the simpler of the two, so lets start with that. There's two ways to delete files managed by git. First is the obvious just deleting the files from your file system.</p>
+<p>Let's make sure that your files are staged and commites.</p>
+<p>Now, delete a file from VS Code, and take a look at the log.</p>
+<pre><code>Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        deleted:    LICENSE
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>Git records this deletion as a file change that needs to be recorded, so it shows up in the log.</p>
+<p>To get this deletion accepted, you'd have to stage using the add command then commit the deletion.</p>
+<p>What's nice is that you can use the restore command to undo the deletion. I've deleted many files inadvertently while working on a project and it's really nice that we can bring them back.</p>
+<p>Let's run that restore command and bring back the file.</p>
+<pre><code>git restore .
+</code></pre>
+<p>There's another command that's a bit quicker called git rm.</p>
+<pre><code>git rm LICENSE
+</code></pre>
+<p>The difference is it both deletes the file and stages it, so it saves you one step. Although it's a bit quicker, I almost never remember to use it.</p>
+<p>I don't actually want to delete the file, so let's set it back.</p>
+<pre><code>git restore -S . &amp;&amp; git restore .
+</code></pre>
+<p>Here's a tip: If you're using linux commands you can use the two ampersands to combine commands.</p>
 <hr>
-<h1 id="other-installs">Other Installs <a class="direct-link" href="#other-installs"> </a></h1>
-<ul>
-<li>Terminal: <a href="https://hyper.is/">Hyper</a></li>
-<li>Editor: <a href="https://code.visualstudio.com/">VSCode</a></li>
-<li>Optional: <a href="https://nodejs.org/en/">Node.js</a></li>
-</ul>
+<h1 id="renaming-files">Renaming Files <a class="direct-link" href="#renaming-files"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You will also need a terminal to run commands. If you're on a Mac, you can use the terminal application that comes with your machine, or another terminal like Hyper, which I'll be using in this course.</p>
-<p>I'll be using VSCode for this course, so here's where you can get that.</p>
-<p>Finally, on most web projects you'll be using something called Node.js, which handles most of the tools for the web, so you may want to go to the website and donwload the installer for that as well.</p>
-<p>So, if you're comfortable with those requirements, let's get started.</p>
+<p>Similar to deleting files, you can rename files in a couple of different ways. But the way git handles this is pretty interesting. Of course, you can simply rename them in operating system.</p>
+<pre><code>git status
+</code></pre>
+<p>Git is going to record this as two actions. A file deletion and a creation. That sort of makes sense, however...when you stage them, things get interesting. Let's go ahead and stage this with the add command.</p>
+<pre><code>git add .
+git status
+</code></pre>
+<p>You'll notice that it will recognize that you've renamed the file. Git is pretty smart about this as it compares both files to try to figure this out.</p>
+<pre><code>
+Undoing this is a bit harder. You can unstage the files, but at some point git will try to keep both two copies of the files. Let's go over it. You can also try the `git restore .` command. There's a better way to do this, and this one's worth remembering.
+
+Just like with delete we have a command to take care of renaming
+
+```sh
+git mv index.html home.html
+</code></pre>
+<p>Now you might be wondering why mv. That doesn't sound anything like rename. In linux, mv is a command that moves files and, it's what you use to rename things. Move is doing the same thing that git does when you renamed the file...moving the file with a new name and then deleting the old one.</p>
+<p><code>git mv</code> makes it easy to go back too, just move the files back.</p>
+<pre><code class="language-sh">git mv home.html index.html
+</code></pre>
+<p>When you're first learning git, it's a good idea to use the <code>git status</code> command often to see what's going on. Make sure you spend some time practicing commands, git can be real frustrating when you're not used to it.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -241,13 +259,13 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#what-is-git%3F">What is Git?</a>
+                    <li><a href="#deleting-and-renaming">Deleting and Renaming</a>
             		</li>
 
-                    <li><a href="#what-do-i-need%3F">What do I need?</a>
+                    <li><a href="#deleting-files">Deleting Files</a>
             		</li>
 
-                    <li><a href="#other-installs">Other Installs</a>
+                    <li><a href="#renaming-files">Renaming Files</a>
             		</li>
                 </ol>
             </div>

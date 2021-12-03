@@ -35,11 +35,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_01/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_01/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
                       01_01 What is Git</a>
-                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -170,11 +170,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/02_06/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/02_06/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       02_06 Syncing GitHub</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=02_06&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=02_06&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -190,49 +190,47 @@
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
-          <h1 id="what-is-git%3F">What is Git? <a class="direct-link" href="#what-is-git%3F"> </a></h1>
-<ul>
-<li>Version Control</li>
-<li>Time Machine</li>
-<li>Check points (commits)</li>
-<li>Multiverse (branches)</li>
-<li>Synchronize (merging)</li>
-</ul>
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="syncing-github">Syncing GitHub <a class="direct-link" href="#syncing-github"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git is what's called a Version or Source Control System. In essence it lets you manage changes you make to files over time.</p>
-<p>With Git, you're basically a historian with a time machine. You're in charge of documenting the history of your project, WITH the added benefit of being able to jump back and forth through time, but unlike normal historians, you have the ability to re-write history.</p>
-<p>You can save checkpoints, which are called commits and leave messages about what happened at each of these checkpoints.</p>
-<p>The best part is another feature called branching that lets you create alternate versions of your code. It's like being able to create alternate realities of your project.</p>
-<p>A branch is a copy of your project that you can work on without changing the original. You can then synchronize branches called merging or go back and forth between them.</p>
+<p>Let's talk about the different ways we can synchronize what's on Github with our local hard drive.</p>
 <hr>
-<h1 id="what-do-i-need%3F">What do I need? <a class="direct-link" href="#what-do-i-need%3F"> </a></h1>
-<ul>
-<li><a href="https://git-scm.com">Git Website</a></li>
-<li>Download Installer</li>
-<li>Windows: GitBash</li>
-</ul>
+<h1 id="clone">Clone <a class="direct-link" href="#clone"> </a></h1>
+<pre><code class="language-sh">git clone URL
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git might already be installed on your machine, but to make sure you have the latest version, you can go to the Git website.</p>
-<p>From here, you simply download an installer for your machine type and follow the instructions. The defaults are perfectly fine for most installations.</p>
-<p>However, if you're on windows, one of the options is to install a terminal application called Gitbash, which makes it easier to run linux commands. That's what most people use when working with Git, however the commands on a windows machine are pretty similar.</p>
+<p>Git clone will take the copy of the GitHub repository and place it on your local hard drive.</p>
 <hr>
-<h1 id="other-installs">Other Installs <a class="direct-link" href="#other-installs"> </a></h1>
-<ul>
-<li>Terminal: <a href="https://hyper.is/">Hyper</a></li>
-<li>Editor: <a href="https://code.visualstudio.com/">VSCode</a></li>
-<li>Optional: <a href="https://nodejs.org/en/">Node.js</a></li>
-</ul>
+<h1 id="fetch">Fetch <a class="direct-link" href="#fetch"> </a></h1>
+<pre><code class="language-sh">git fetch
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You will also need a terminal to run commands. If you're on a Mac, you can use the terminal application that comes with your machine, or another terminal like Hyper, which I'll be using in this course.</p>
-<p>I'll be using VSCode for this course, so here's where you can get that.</p>
-<p>Finally, on most web projects you'll be using something called Node.js, which handles most of the tools for the web, so you may want to go to the website and donwload the installer for that as well.</p>
-<p>So, if you're comfortable with those requirements, let's get started.</p>
+<p>Fetch downloads information from your remote repository to bring you local repo up to date. Fetch doesn't actually do anything with that information, but it synchronizes your local folder with your remote.</p>
+<hr>
+<h1 id="pull">Pull <a class="direct-link" href="#pull"> </a></h1>
+<pre><code class="language-sh">git pull
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Pull is a combination of doing a fetch, but also merging the data that is in your remote with the local version.</p>
+<hr>
+<ul>
+<li>Git Clone</li>
+<li>Fetch remote</li>
+<li>Git Status</li>
+<li>Git branch -a</li>
+<li>Create a new branch</li>
+<li>Make</li>
+</ul>
+<h1 id="concusion">Concusion <a class="direct-link" href="#concusion"> </a></h1>
+<p>Github is super useful for keepi</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -241,13 +239,19 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#what-is-git%3F">What is Git?</a>
+                    <li><a href="#syncing-github">Syncing GitHub</a>
             		</li>
 
-                    <li><a href="#what-do-i-need%3F">What do I need?</a>
+                    <li><a href="#clone">Clone</a>
             		</li>
 
-                    <li><a href="#other-installs">Other Installs</a>
+                    <li><a href="#fetch">Fetch</a>
+            		</li>
+
+                    <li><a href="#pull">Pull</a>
+            		</li>
+
+                    <li><a href="#concusion">Concusion</a>
             		</li>
                 </ol>
             </div>

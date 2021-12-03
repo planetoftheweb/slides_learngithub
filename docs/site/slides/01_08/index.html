@@ -35,11 +35,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_01/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_01/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
                       01_01 What is Git</a>
-                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -98,11 +98,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_08/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_08/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       01_08 Branches</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_08&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_08&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -190,49 +190,91 @@
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
-          <h1 id="what-is-git%3F">What is Git? <a class="direct-link" href="#what-is-git%3F"> </a></h1>
-<ul>
-<li>Version Control</li>
-<li>Time Machine</li>
-<li>Check points (commits)</li>
-<li>Multiverse (branches)</li>
-<li>Synchronize (merging)</li>
-</ul>
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="branches">Branches <a class="direct-link" href="#branches"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git is what's called a Version or Source Control System. In essence it lets you manage changes you make to files over time.</p>
-<p>With Git, you're basically a historian with a time machine. You're in charge of documenting the history of your project, WITH the added benefit of being able to jump back and forth through time, but unlike normal historians, you have the ability to re-write history.</p>
-<p>You can save checkpoints, which are called commits and leave messages about what happened at each of these checkpoints.</p>
-<p>The best part is another feature called branching that lets you create alternate versions of your code. It's like being able to create alternate realities of your project.</p>
-<p>A branch is a copy of your project that you can work on without changing the original. You can then synchronize branches called merging or go back and forth between them.</p>
+<p>One of the most powerful features of Git is the ability to create branches. Branches let you create different versions of your code so you can play around with adding new features without worrying about messing up what's stable.</p>
 <hr>
-<h1 id="what-do-i-need%3F">What do I need? <a class="direct-link" href="#what-do-i-need%3F"> </a></h1>
-<ul>
-<li><a href="https://git-scm.com">Git Website</a></li>
-<li>Download Installer</li>
-<li>Windows: GitBash</li>
-</ul>
+<h1 id="looking-at-branches">Looking at Branches <a class="direct-link" href="#looking-at-branches"> </a></h1>
+<pre><code class="language-sh">git branch
+# * main
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git might already be installed on your machine, but to make sure you have the latest version, you can go to the Git website.</p>
-<p>From here, you simply download an installer for your machine type and follow the instructions. The defaults are perfectly fine for most installations.</p>
-<p>However, if you're on windows, one of the options is to install a terminal application called Gitbash, which makes it easier to run linux commands. That's what most people use when working with Git, however the commands on a windows machine are pretty similar.</p>
+<p>The simplest branch command is the git branch command, it lets you take a look at all of the branches in your repository. Right now, we only have a single branch so that's all that it shows us.</p>
 <hr>
-<h1 id="other-installs">Other Installs <a class="direct-link" href="#other-installs"> </a></h1>
+<h1 id="copying-a-branch">Copying a branch <a class="direct-link" href="#copying-a-branch"> </a></h1>
+<pre><code class="language-sh">git switch -c NAME
+# git checkout -b NAME
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>With the git switch command we can create a new branch and switch to it. It will have the same history as the current branch.</p>
+<pre><code class="language-sh">git log --oneline
+</code></pre>
+<p>We can use the same switch command to switch to the main branch and then take a look at our log. You'll notice that it has the same history as the main branch.</p>
+<p>This is typically where we amake some changes to our project. You create branches to leave the working version of your coe alone while you experiment with some changes.</p>
+<p>Let's do that.</p>
+<p>git switch -c fix-classes</p>
+<p>I noticed that I have some additional classes in my code. Mainly the site-header as well as the site-nav classes. I'm using this code to give people a template to use for simple bootstrap 4 sites, but I copied this code from another site and I don't want any classes that are not part of the bootstrap framework. Let's get rid of those.</p>
+<pre><code>- site-nav
+- site-header
+- family-sans
+</code></pre>
+<p>Let's add and commit those changes.</p>
+<pre><code class="language-sh">git add .
+git commit -m &quot;Remove unwanted classes&quot;
+</code></pre>
+<p>Now we're ready to synchronize what we're doing with our main branch. For that we'll need to know how to merge branches.</p>
+<hr>
+<h1 id="merging">Merging <a class="direct-link" href="#merging"> </a></h1>
+<pre><code>git merge &lt;branch&gt;
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This command will merge the changes from the <branch> into the current branch.</p>
+<p>Let's do that with our project.</p>
+<pre><code class="language-sh">git checkout main
+git merge fix-classes
+</code></pre>
+<p>This merge will take the new history from the commits in the new branch and add them to the main branch.</p>
+<hr>
+<h1 id="deleting-a-branch">Deleting a branch <a class="direct-link" href="#deleting-a-branch"> </a></h1>
+<pre><code class="language-sh">git branch --delete NAME
+# git branch -d NAME
+# git branch -D NAME
+</code></pre>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Once you're finished building a feature, or fixing some code, you can safely delete the branch.</p>
+<p>To delete a branch we issue the git branch command and then use the --delete flag. There's a couple of shortcuts. Branches have to be clean of conflicts. The capital D forces git to ignore things and just delete the branch.</p>
+<pre><code class="language-sh">git branch -d fix-classes
+git log --oneline
+</code></pre>
+<hr>
+<h1 id="git-flow">Git Flow <a class="direct-link" href="#git-flow"> </a></h1>
 <ul>
-<li>Terminal: <a href="https://hyper.is/">Hyper</a></li>
-<li>Editor: <a href="https://code.visualstudio.com/">VSCode</a></li>
-<li>Optional: <a href="https://nodejs.org/en/">Node.js</a></li>
+<li>Feature/fix branch</li>
+<li>Make changes</li>
+<li>Merge to master</li>
+<li>Delete old branch</li>
 </ul>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You will also need a terminal to run commands. If you're on a Mac, you can use the terminal application that comes with your machine, or another terminal like Hyper, which I'll be using in this course.</p>
-<p>I'll be using VSCode for this course, so here's where you can get that.</p>
-<p>Finally, on most web projects you'll be using something called Node.js, which handles most of the tools for the web, so you may want to go to the website and donwload the installer for that as well.</p>
-<p>So, if you're comfortable with those requirements, let's get started.</p>
+<p>This brings me to how developers work on real projects. Sometimes that's called your Git Flow. Every company has a different version of this but it follows a general pattern.</p>
+<p>When you collaborate with others, everyone leaves the main branch alone. You can see that things would get messy if everyone was trying to work on the same branch.</p>
+<p>They create a new branch for new feature or fixes.</p>
+<p>Then, they make changes on new branches performing any number of commits.</p>
+<p>Then merge their changes onto the main branch.</p>
+<p>Finally, they delete the old branch.</p>
+<hr>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -241,13 +283,22 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#what-is-git%3F">What is Git?</a>
+                    <li><a href="#branches">Branches</a>
             		</li>
 
-                    <li><a href="#what-do-i-need%3F">What do I need?</a>
+                    <li><a href="#looking-at-branches">Looking at Branches</a>
             		</li>
 
-                    <li><a href="#other-installs">Other Installs</a>
+                    <li><a href="#copying-a-branch">Copying a branch</a>
+            		</li>
+
+                    <li><a href="#merging">Merging</a>
+            		</li>
+
+                    <li><a href="#deleting-a-branch">Deleting a branch</a>
+            		</li>
+
+                    <li><a href="#git-flow">Git Flow</a>
             		</li>
                 </ol>
             </div>

@@ -35,11 +35,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
-                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_01/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
+                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_01/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
                       01_01 What is Git</a>
-                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
+                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_01&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -116,11 +116,11 @@
                     </a>
                   </div>
                 
-                  <div class="d-flex justify-content-end align-items-right border-bottom p-2 ">
-                    <a class="text-decoration-none  link-secondary  link-primary" href="/site/slides/01_10/index.html">
-                      <i class="fas fa-file-alt me-2 lh-1  text-primary "></i>
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2  bg-primary ">
+                    <a class="text-decoration-none  fw-bolder link-light  link-primary" href="/site/slides/01_10/index.html">
+                      <i class="fas fa-file-alt me-2 lh-1  text-light "></i>
                       01_10 Stash and Clean</a>
-                    <a class=" link-secondary  flex-fill ms-3 text-end" href="../../../?d=01_10&#">
+                    <a class=" link-light  flex-fill ms-3 text-end" href="../../../?d=01_10&#">
                       <i class="fab fa-slideshare"></i>
                     </a>
                   </div>
@@ -190,49 +190,73 @@
                 </nav>
           </aside>
         <main class="main col col-md-6 col-lg-8">
-          <h1 id="what-is-git%3F">What is Git? <a class="direct-link" href="#what-is-git%3F"> </a></h1>
-<ul>
-<li>Version Control</li>
-<li>Time Machine</li>
-<li>Check points (commits)</li>
-<li>Multiverse (branches)</li>
-<li>Synchronize (merging)</li>
-</ul>
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="stash-and-clean">Stash and Clean <a class="direct-link" href="#stash-and-clean"> </a></h1>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git is what's called a Version or Source Control System. In essence it lets you manage changes you make to files over time.</p>
-<p>With Git, you're basically a historian with a time machine. You're in charge of documenting the history of your project, WITH the added benefit of being able to jump back and forth through time, but unlike normal historians, you have the ability to re-write history.</p>
-<p>You can save checkpoints, which are called commits and leave messages about what happened at each of these checkpoints.</p>
-<p>The best part is another feature called branching that lets you create alternate versions of your code. It's like being able to create alternate realities of your project.</p>
-<p>A branch is a copy of your project that you can work on without changing the original. You can then synchronize branches called merging or go back and forth between them.</p>
+<p>Some commands aren't really part of the core of what Git can do, but they're so useful, that I'd like to leave them here as a bonus before we get into Github.</p>
 <hr>
-<h1 id="what-do-i-need%3F">What do I need? <a class="direct-link" href="#what-do-i-need%3F"> </a></h1>
-<ul>
-<li><a href="https://git-scm.com">Git Website</a></li>
-<li>Download Installer</li>
-<li>Windows: GitBash</li>
-</ul>
+<h1 id="stashing-code">Stashing Code <a class="direct-link" href="#stashing-code"> </a></h1>
+<pre><code class="language-sh">git stash
+# git stash list
+# git stash apply
+# git stash pop
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>Git might already be installed on your machine, but to make sure you have the latest version, you can go to the Git website.</p>
-<p>From here, you simply download an installer for your machine type and follow the instructions. The defaults are perfectly fine for most installations.</p>
-<p>However, if you're on windows, one of the options is to install a terminal application called Gitbash, which makes it easier to run linux commands. That's what most people use when working with Git, however the commands on a windows machine are pretty similar.</p>
+<p>Stash lets you temporarily put away your changes in a queue. The queue is like a deck of cards. If you add more items to the queue, they'll be placed on top. You can either apply an item, which leaves the queue untouched or pop the queue, which will remove the last item from the queue.</p>
+<p>Let's make a change to our project. I want to test out the different colors that I can use for this. Since this is a new feature, we'll create a branch for it.</p>
+<pre><code class="language-sh">git switch -c bgcolors
+</code></pre>
+<p>I have an extension that lets me preview changes, so I'll run it to preview the site. Now, I can make some changes.</p>
+<pre><code class="language-sh">+ &lt;body class=&quot;bg-primary&quot;&gt;
++ &lt;nav class=&quot;family-sans navbar navbar-expand-md bg-primary navbar-dark text-uppercase&quot;&gt;
+</code></pre>
+<p>Now, let's save this and stash the changes. You can see that the site goes back to what it used to be. The difference is that the stash is now in a queue.</p>
+<pre><code class="language-sh">git stash list
+</code></pre>
+<p>That shows you that there's an item stashed away. There's two ways to get the stashed item. Let's try using apply to leave the queue as is.</p>
+<pre><code class="language-sh">git stash apply 0
+</code></pre>
+<p>Now we get the old items back. They're just modified files in the working directory. If we want to clear them out we can use restore.</p>
+<pre><code class="language-sh">git restore .
+</code></pre>
+<p>Now we have the original state back. Let's try changing the colors again.</p>
+<p>and now go ahead and stash again.</p>
+<pre><code class="language-sh">git stash
+git stash list
+</code></pre>
+<p>Now you can see that there are two items in the queue. Item 0 is the one we just stashed and item 1 is the previous one.</p>
+<p>If we want to get rid of a stash item, we can use pop instead of apply.</p>
+<pre><code class="language-sh">git restore .
+git stash pop
+git stash list
+</code></pre>
+<p>Pop will just take the latest stash and apply it. It's a lot quicker, but it does get rid of the last item in the queue. You can also just clear the stash with the command <code>git stash clear</code>.</p>
+<pre><code class="language-sh">git stash clear
+git stash list
+</code></pre>
+<p>Now we have no stashes left, but we can still apply our last change in a new branch.</p>
+<pre><code class="language-sh">git switch main
+git merge bgcolors
+</code></pre>
 <hr>
-<h1 id="other-installs">Other Installs <a class="direct-link" href="#other-installs"> </a></h1>
-<ul>
-<li>Terminal: <a href="https://hyper.is/">Hyper</a></li>
-<li>Editor: <a href="https://code.visualstudio.com/">VSCode</a></li>
-<li>Optional: <a href="https://nodejs.org/en/">Node.js</a></li>
-</ul>
+<h1 id="git-clean">Git Clean <a class="direct-link" href="#git-clean"> </a></h1>
+<pre><code class="language-sh">git clean -n # dry run
+git clean -d # directories
+git clean -f # force
+</code></pre>
 <blockquote>
 <blockquote></blockquote>
 </blockquote>
-<p>You will also need a terminal to run commands. If you're on a Mac, you can use the terminal application that comes with your machine, or another terminal like Hyper, which I'll be using in this course.</p>
-<p>I'll be using VSCode for this course, so here's where you can get that.</p>
-<p>Finally, on most web projects you'll be using something called Node.js, which handles most of the tools for the web, so you may want to go to the website and donwload the installer for that as well.</p>
-<p>So, if you're comfortable with those requirements, let's get started.</p>
+<p>Git clean is pretty simple. It lets you remove all untracked files and directories from your branch quickly. This is a nice way of removing old files that you don't need anymore.</p>
+<p>It has a lot of options, but the ones I find really useful are -n, which will show you which files are going to be deleted, and -d, which will delete directories.</p>
+<p>Let's try a few of these commands. Just the n option, the n with the d option and then <code>git clean -df</code></p>
+<p>Be careful with these commands because they're permanent.</p>
+<h1 id="conclusion">Conclusion <a class="direct-link" href="#conclusion"> </a></h1>
+<p>Git has a lot of these type of utility commands that may not be core commands, but so useful that you'll learn many and use them often.</p>
 
         </main>
         <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
@@ -241,13 +265,16 @@
             <div class="">
                 <ol>
                     
-                    <li><a href="#what-is-git%3F">What is Git?</a>
+                    <li><a href="#stash-and-clean">Stash and Clean</a>
             		</li>
 
-                    <li><a href="#what-do-i-need%3F">What do I need?</a>
+                    <li><a href="#stashing-code">Stashing Code</a>
             		</li>
 
-                    <li><a href="#other-installs">Other Installs</a>
+                    <li><a href="#git-clean">Git Clean</a>
+            		</li>
+
+                    <li><a href="#conclusion">Conclusion</a>
             		</li>
                 </ol>
             </div>
