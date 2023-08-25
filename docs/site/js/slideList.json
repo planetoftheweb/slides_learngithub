@@ -5,36 +5,6 @@
     "filename": "00_02",
     "title": "Using the Exercises" }
 ,{
-    "filename": "01_01",
-    "title": "What is Git" }
-,{
-    "filename": "01_02",
-    "title": "Setting Up a Project" }
-,{
-    "filename": "01_03",
-    "title": "Understanding Environments" }
-,{
-    "filename": "01_04",
-    "title": "Ignoring Files" }
-,{
-    "filename": "01_05",
-    "title": "Deleting and Renaming Files" }
-,{
-    "filename": "01_06",
-    "title": "Differences" }
-,{
-    "filename": "01_07",
-    "title": "Changing History" }
-,{
-    "filename": "01_08",
-    "title": "Branches" }
-,{
-    "filename": "01_09",
-    "title": "Merge Conflicts" }
-,{
-    "filename": "01_10",
-    "title": "Stash and Clean" }
-,{
     "filename": "02_01",
     "title": "Github" }
 ,{
@@ -44,15 +14,6 @@
     "filename": "02_03",
     "title": "Github Options" }
 ,{
-    "filename": "02_04",
-    "title": "Pull Requests" }
-,{
-    "filename": "02_05",
-    "title": "Organizing Projects" }
-,{
-    "filename": "02_06",
-    "title": "Syncing GitHub" }
-,{
     "filename": "99_01",
     "title": "Next Steps" }
 ,{
@@ -61,4 +22,94 @@
 ,{
     "filename": "slides",
     "title": "" }
+,{
+    "filename": "01_01",
+    "title": "What is Version Control" }
+,{
+    "filename": "01_02",
+    "title": "What is Git" }
+,{
+    "filename": "01_03",
+    "title": "Setting Up a Project" }
+,{
+    "filename": "01_04",
+    "title": "Understanding Environments" }
+,{
+    "filename": "01_05",
+    "title": "Ignoring Files" }
+,{
+    "filename": "01_06",
+    "title": "Deleting and Renaming Files" }
+,{
+    "filename": "01_07",
+    "title": "Differences" }
+,{
+    "filename": "01_08",
+    "title": "Changing History" }
+,{
+    "filename": "01_09",
+    "title": "Branches" }
+,{
+    "filename": "01_10",
+    "title": "Merge Conflicts" }
+,{
+    "filename": "01_11",
+    "title": "Stash and Clean" }
+,{
+    "filename": "02_04",
+    "title": "Understanding GitHub Flow" }
+,{
+    "filename": "02_05",
+    "title": "Learning Markdown" }
+,{
+    "filename": "02_06",
+    "title": "GitHub Markdown Additions" }
+,{
+    "filename": "02_07",
+    "title": "GitHub Repo Essentials" }
+,{
+    "filename": "03_01",
+    "title": "Pull Requests" }
+,{
+    "filename": "03_02",
+    "title": "Pull Request Features" }
+,{
+    "filename": "03_03",
+    "title": "Link activity within a Pull Request" }
+,{
+    "filename": "03_04",
+    "title": "Partnering on Code" }
+,{
+    "filename": "03_05",
+    "title": "Organizing Projects" }
+,{
+    "filename": "03_06",
+    "title": "Syncing GitHub" }
+,{
+    "filename": "03_07",
+    "title": "Repository Insights" }
+,{
+    "filename": "03_08",
+    "title": "GitHub Shortcut Features" }
+,{
+    "filename": "04_01",
+    "title": "GitHub Discussions" }
+,{
+    "filename": "04_02",
+    "title": "Discussion Options" }
+,{
+    "filename": "04_03",
+    "title": "GitHub Notifications" }
+,{
+    "filename": "04_04",
+    "title": "Notification Options" }
+,{
+    "filename": "04_05",
+    "title": "GitHub Gists" }
+,{
+    "filename": "04_06",
+    "title": "GitHub Wikis" }
+,{
+    "filename": "04_07",
+    "title": "GitHub Pages" }
 ]

@@ -1,10 +1,10 @@
 <!-- .slide: data-state="layout-title no-fragment"  -->
 
-# Bootstrap 5
+# Learning
 
-Essential Training
+Git & GitHub
 
-<div class="btn btn-warning">raybo.org/slides_bootstrap5</div>
+<div class="btn btn-warning">raybo.org/slides_learngithub</div>
 
 <p class="small mt-4"><span class="badge bg-light text-dark me-1 ms-2">&larr; &rarr;</span> navigate
 <span class="badge bg-light text-dark me-1 ms-2">t</span>toolbar

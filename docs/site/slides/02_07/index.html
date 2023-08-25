@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Roboto+Slab:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-size: 1.2em;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Asap', sans-serif;
+        font-weight: 700;
+      }
+      h1:nth-of-type(n+2) {
+        font-size: 1.8rem;
+        opacity: 0.7;
+        color: #8C6621;
+      }
+      .slide-link a,
+      a code {
+        font-family: 'Asap', sans-serif;
+        font-size: 1.1em;
+        display: inline-block;
+        padding: 0.2em 0.5em;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 0.25em;
+        background-color: gray;
+      }
+
+      a code.code-primary {
+        background-color: var(--bs-primary);
+      }
+
+      a code.code-royal {
+        background-color: var(--bs-purple);
+      }
+      .slide-link a {
+        background-color: var(--bs-red);
+      }
+    </style>
+  </head>
+  <body class="bg-subdued" style="font-family: Roboto Slab; font-weight: 300">
+    <div class="post post-sidebar container-fluid">
+      <div class="row justify-content-md-center">
+
+        <aside class="bg-dark min-vh-100  aside aside-main col col-md-3 col-lg-2 gx-0">
+            <nav class="sticky-top fw-medium lh-sm pt-2 ">
+              <h3 class="text-secondary ms-2">Documents</h3>
+                
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_01/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_01</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">What is Version Control</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_01&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_02/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_02</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">What is Git</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_02&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_03/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_03</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Setting Up a Project</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_03&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_04/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_04</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Understanding Environments</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_04&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_05/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_05</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Ignoring Files</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_05&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_06/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_06</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Deleting and Renaming Files</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_06&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_07/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_07</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Differences</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_07&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_08/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_08</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Changing History</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_08&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_09/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_09</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Branches</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_09&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_10/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_10</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Merge Conflicts</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_10&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../01_11/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">01_11</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Stash and Clean</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=01_11&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_01/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_01</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Github</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_01&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_02/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_02</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Pushing to Github</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_02&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_03/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_03</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Github Options</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_03&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_04/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_04</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Understanding GitHub Flow</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_04&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_05/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_05</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Learning Markdown</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_05&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../02_06/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_06</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Markdown Additions</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_06&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color: #DC9F04" >
+                    <a class="text-decoration-none d-flex  text-light link-light " href="../02_07/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">02_07</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Repo Essentials</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=02_07&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_01/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_01</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Pull Requests</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_01&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_02/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_02</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Pull Request Features</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_02&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_03/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_03</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Link activity within a Pull Request</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_03&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_04/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_04</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Partnering on Code</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_04&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_05/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_05</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Organizing Projects</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_05&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_06/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_06</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Syncing GitHub</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_06&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_07/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_07</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Repository Insights</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_07&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../03_08/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">03_08</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Shortcut Features</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=03_08&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_01/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_01</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Discussions</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_01&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_02/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_02</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Discussion Options</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_02&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_03/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_03</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Notifications</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_03&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_04/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_04</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Notification Options</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_04&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_05/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_05</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Gists</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_05&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_06/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_06</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Wikis</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_06&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../04_07/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">04_07</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">GitHub Pages</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=04_07&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                  <div class="d-flex justify-content-end align-items-right border-bottom p-2"  style="background-color:#F0C051;">
+                    <a class="text-decoration-none d-flex " href="../99_01/index.html">
+                      <i class="bi bi-file-text-fill me-2 lh-1" style="color: #8C6621;"></i>
+                      <div class="d-flex flex-column lh-1">
+                        <span class="fw-medium lh-1" style="color: #8C6621; font-size: .7em">99_01</span>
+                        <span class="fw-bold lh-1 text-white" style="font-family: Asap; font-size: 1.1em">Next Steps</span>
+                      </div>
+                    </a>
+                    <a class="flex-fill ms-3 text-end" style="color: #8C6621;" href="../../../?d=99_01&#">
+                      <i class="bi bi-collection-play-fill"></i>
+                    </a>
+                  </div>
+                
+                
+                </nav>
+          </aside>
+        <main class="main col col-md-6 col-lg-8">
+          <!-- .slide: data-state="layout-title" class="bg-dark"-->
+<h1 id="github-repo-essentials" tabindex="-1">GitHub Repo Essentials <a class="direct-link" href="#github-repo-essentials"> </a></h1>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>There are a number of important files that are a great idea to add to GitHub repos. Let's take a look at them.</p>
+<hr>
+<h1 id="readme.md" tabindex="-1"><a href="http://README.md">README.md</a> <a class="direct-link" href="#readme.md"> </a></h1>
+<ul>
+<li>Purpose</li>
+<li>Homepage</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+<li>Table of Contents</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>A readme file tells people what the project does and why it's useful.</p>
+<p>When you go to a repository it's the file that shows up when viewing the repo, it's sort of the repository's homepage.</p>
+<p>The README file can be either in the main folder, the <code>root</code> of the repo, but it can also go in the <code>docs</code> folder or in a special hidden <code>.github</code> folder</p>
+<p>If you create headings, then the file will receive an automatic table of contents to allow users to jump to different sections.</p>
+<p>The headings will also get links when you hover over them to allow you to link to those headings directly.</p>
+<h1 id="readme.md-1" tabindex="-1"><a href="http://README.md">README.md</a> <a class="direct-link" href="#readme.md-1"> </a></h1>
+<ul>
+<li>Purpose</li>
+<li>Homepage</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+<li>Table of Content</li>
+</ul>
+<hr>
+<h1 id="profile-readme" tabindex="-1">Profile README <a class="direct-link" href="#profile-readme"> </a></h1>
+<ul>
+<li>Same as usernmae</li>
+<li>Must be public</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>If you create a repository with the same name as your username, that file will appear as your profile.</p>
+<p>This special repository needs to be public, not private</p>
+<hr>
+<h1 id="license" tabindex="-1">LICENSE <a class="direct-link" href="#license"> </a></h1>
+<ul>
+<li>Open Source</li>
+<li>Helpers</li>
+<li><code>.md</code>, <code>.txt</code>, <code>rst</code></li>
+<li><code>root</code> folder</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Public repositories are used to share open source software, but for it to really count, you need to define how others can use, change and distribute the software for that, you create a license file.</p>
+<p>There are many types and GitHub has some of the templates, which you can access when you create a repo.</p>
+<p>On top of the README, there's a section where you can look at and add some of these special files with some buit in templates for popular ones.</p>
+<hr>
+<h1 id="code_of_conduct.md" tabindex="-1">CODE_OF_CONDUCT.md <a class="direct-link" href="#code_of_conduct.md"> </a></h1>
+<ul>
+<li>Constructive communities</li>
+<li>Templates</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This special file establishes expectations and how people are epected to behave when using your project.</p>
+<p>Like with the license, there is a built in helpers.</p>
+<hr>
+<h1 id="security.md" tabindex="-1"><a href="http://SECURITY.md">SECURITY.md</a> <a class="direct-link" href="#security.md"> </a></h1>
+<ul>
+<li>Security Information</li>
+<li>Templates</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>In this file, you can specify your security support and how to report vulnerabilities.</p>
+<p>There is a template in GitHub that will help you get started.</p>
+<hr>
+<h1 id="contributing.md" tabindex="-1"><a href="http://CONTRIBUTING.md">CONTRIBUTING.md</a> <a class="direct-link" href="#contributing.md"> </a></h1>
+<ul>
+<li>How to contribute</li>
+<li>In the <code>.github</code> folder</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+<li>Issues sidebar</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This is a special file that lets people know some guidelines on how to contribute to the project. You can include things like steps for creating good issues, links to docs</p>
+<p>It will appear at the bottom of the issues sidebar for quick acccess.</p>
+<hr>
+<h1 id="security-policy" tabindex="-1">Security Policy <a class="direct-link" href="#security-policy"> </a></h1>
+<ul>
+<li>Security Information</li>
+<li>Template</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>In this file, you can specify your security support and how to report vulnerabilities</p>
+<hr>
+<h1 id="contributing" tabindex="-1">Contributing <a class="direct-link" href="#contributing"> </a></h1>
+<ul>
+<li>How to contribute</li>
+<li>In the <code>.github</code> folder</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+<li>Issues sidebar</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This is a special file that lets people know some guidelines on how to contribute to the project. You can include things like steps for creating good issues, links to docs</p>
+<p>It will appear at the bottom of the issues sidebar for quick acccess.</p>
+<hr>
+<h1 id="support" tabindex="-1">SUPPORT <a class="direct-link" href="#support"> </a></h1>
+<ul>
+<li>How to contribute</li>
+<li>In the <code>.github</code> folder</li>
+<li><code>root</code>, <code>docs</code> or <code>.github</code></li>
+<li>Issues sidebar</li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>Lets users know where they can find support for the project.</p>
+<p>It will appear at the bottom of the issues sidebar for quick acccess.</p>
+<hr>
+<h1 id="codeowners" tabindex="-1">CodeOwners <a class="direct-link" href="#codeowners"> </a></h1>
+<ul>
+<li></li>
+</ul>
+<blockquote>
+<blockquote></blockquote>
+</blockquote>
+<p>This file has information about how your users can</p>
+
+        </main>
+        <aside class="aside aside-supplemental col col-md-3 col-lg-2 d-none d-md-block">
+          <nav class="sticky-top">
+            <h3 class="pt-2">This Slide</h3>
+            <div class="">
+                <ol>
+                    
+                    <li><a href="#github-repo-essentials">GitHub Repo Essentials</a>
+            		</li>
+
+                    <li><a href="#readme.md">README.md</a>
+            		</li>
+
+                    <li><a href="#readme.md-1">README.md</a>
+            		</li>
+
+                    <li><a href="#profile-readme">Profile README</a>
+            		</li>
+
+                    <li><a href="#license">LICENSE</a>
+            		</li>
+
+                    <li><a href="#code_of_conduct.md">CODE_OF_CONDUCT.md</a>
+            		</li>
+
+                    <li><a href="#security.md">SECURITY.md</a>
+            		</li>
+
+                    <li><a href="#contributing.md">CONTRIBUTING.md</a>
+            		</li>
+
+                    <li><a href="#security-policy">Security Policy</a>
+            		</li>
+
+                    <li><a href="#contributing">Contributing</a>
+            		</li>
+
+                    <li><a href="#support">SUPPORT</a>
+            		</li>
+
+                    <li><a href="#codeowners">CodeOwners</a>
+            		</li>
+                </ol>
+            </div>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

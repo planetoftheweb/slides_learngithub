@@ -1,7 +1,7 @@
 export default {
   root: "src",
   publicDir: "public",
-  outDir: "../docs",
+  outDir: "/docs",
   server: {
     open: true,
   },
@@ -9,6 +9,9 @@ export default {
     {
       name: "reload",
       configureServer(server) {
+        // To reload slides
+        // ask the server to reload
+        // if a markdown file changes
         const { ws, watcher } = server;
         watcher.on("change", (file) => {
           if (file.endsWith(".md")) {
