@@ -5,24 +5,6 @@
     "filename": "00_02",
     "title": "Using the Exercises" }
 ,{
-    "filename": "02_01",
-    "title": "Github" }
-,{
-    "filename": "02_02",
-    "title": "Pushing to Github" }
-,{
-    "filename": "02_03",
-    "title": "Github Options" }
-,{
-    "filename": "99_01",
-    "title": "Next Steps" }
-,{
-    "filename": "demo",
-    "title": "Opinionated Reveal.js" }
-,{
-    "filename": "slides",
-    "title": "" }
-,{
     "filename": "01_01",
     "title": "What is Version Control" }
 ,{
@@ -56,6 +38,15 @@
     "filename": "01_11",
     "title": "Stash and Clean" }
 ,{
+    "filename": "02_01",
+    "title": "Github" }
+,{
+    "filename": "02_02",
+    "title": "Pushing to Github" }
+,{
+    "filename": "02_03",
+    "title": "Github Options" }
+,{
     "filename": "02_04",
     "title": "Understanding GitHub Flow" }
 ,{
@@ -66,7 +57,7 @@
     "title": "GitHub Markdown Additions" }
 ,{
     "filename": "02_07",
-    "title": "GitHub Repo Essentials" }
+    "title": "Repo Essential Files" }
 ,{
     "filename": "03_01",
     "title": "Pull Requests" }
@@ -96,20 +87,23 @@
     "title": "GitHub Discussions" }
 ,{
     "filename": "04_02",
-    "title": "Discussion Options" }
-,{
-    "filename": "04_03",
     "title": "GitHub Notifications" }
 ,{
-    "filename": "04_04",
-    "title": "Notification Options" }
-,{
-    "filename": "04_05",
+    "filename": "04_03",
     "title": "GitHub Gists" }
 ,{
-    "filename": "04_06",
+    "filename": "04_04",
     "title": "GitHub Wikis" }
 ,{
-    "filename": "04_07",
+    "filename": "04_05",
     "title": "GitHub Pages" }
+,{
+    "filename": "99_01",
+    "title": "Next Steps" }
+,{
+    "filename": "demo",
+    "title": "Opinionated Reveal.js" }
+,{
+    "filename": "slides",
+    "title": "" }
 ]
